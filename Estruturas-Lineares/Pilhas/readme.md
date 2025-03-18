@@ -94,4 +94,4 @@ Os navegadores web usam pilhas para rastrear o histórico de navegação:
 
 ---
 
-Por Lucas Dórea Cardoso e Deivid Cerqueira - UDF Ciência da Computação
+Mauricio Gabriel e Paulo André - UDF Ciência da Computação
