@@ -13,11 +13,11 @@ Este repositório contém exemplos práticos de diferentes estruturas de dados, 
 
 ### Sistema de Gerenciamento de Tarefas com Prioridades usando Filas
 
-**Problema:** Em um ambiente de trabalho colaborativo, precisamos gerenciar diversas tarefas com diferentes níveis de prioridade. As tarefas de alta prioridade devem ser executadas antes das tarefas de baixa prioridade, mas tarefas da mesma prioridade devem ser executadas na ordem em que foram adicionadas.
+**Problema:** Em um hospital movimentado, os pacientes precisam ser atendidos com base na gravidade de sua condição, e não na ordem de chegada. Pacientes críticos devem ser atendidos primeiro, enquanto aqueles com condições menos urgentes podem aguardar mais tempo. No entanto, dentro do mesmo nível de gravidade, os pacientes devem ser atendidos na ordem em que chegaram.
 
-**Solução:** Implementamos um sistema de gerenciamento de tarefas usando uma estrutura de dados de fila de prioridade. Cada tarefa tem um nome, descrição e nível de prioridade. As tarefas são organizadas em filas separadas com base em sua prioridade, e quando solicitamos a próxima tarefa a ser executada, a estrutura retorna a primeira tarefa da fila de maior prioridade.
+**Solução:** Implementamos um sistema de triagem hospitalar usando uma fila de prioridade. Cada paciente recebe um nome, idade, descrição do problema de saúde e um nível de gravidade (exemplo: Crítico, Grave, Moderado, Leve). Os pacientes são armazenados em filas separadas de acordo com seu nível de gravidade. Quando um médico solicita o próximo paciente para atendimento, o sistema retorna o primeiro paciente da fila com maior prioridade. 
 
-A implementação completa deste problema pode ser encontrada no arquivo [tarefa_prioridade.py](tarefa_prioridade.py) na raiz deste repositório.
+A implementação completa deste problema pode ser encontrada no arquivo [tarefa_prioridade.py](tarefa_prioridade.py) deste repositório.
 
 ## Estrutura do Repositório
 
