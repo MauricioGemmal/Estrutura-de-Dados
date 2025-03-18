@@ -112,4 +112,4 @@ Em um sistema de atendimento ao cliente:
 
 ---
 
-Por Lucas Dórea Cardoso e Deivid Cerqueira - UDF Ciência da Computação
+Por Mauricio Gabriel e Paulo André - UDF Ciência da Computação
