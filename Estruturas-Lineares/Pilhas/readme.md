@@ -1,114 +1,97 @@
-# Filas (Queues)
+# Pilhas (Stacks)
 
-## Conceito
+## Introdução
 
-Uma fila é uma estrutura de dados linear baseada no princípio FIFO (First In, First Out), onde o primeiro elemento inserido é também o primeiro a ser removido. Um exemplo prático é uma fila de banco: a primeira pessoa a entrar é a primeira a ser atendida.
+Uma pilha é uma estrutura de dados linear baseada no princípio LIFO (Last In, First Out), onde o último elemento inserido é o primeiro a ser removido. Um exemplo prático disso é uma pilha de pratos: o prato mais recentemente colocado no topo será o primeiro a ser retirado.
 
 ## Características
 
-- **Princípio FIFO**: Primeiro a entrar, primeiro a sair.
-- **Acesso Restrito**: Inserção no final (traseira) e remoção do início (frente).
-- **Operações Fundamentais**: `enqueue` (inserção) e `dequeue` (remoção).
-- **Formas de Implementação**: Utilizando arrays ou listas encadeadas.
+- **Princípio LIFO**: Último a entrar, primeiro a sair.
+- **Acesso Restrito**: Inserção e remoção acontecem apenas no topo.
+- **Operações Fundamentais**: `push` (inserir) e `pop` (remover).
+- **Implementações**: Utilizando arrays ou listas encadeadas.
 
-## Operações Essenciais
+## Operações Fundamentais
 
-### Enqueue (Inserir)
-- Adiciona um elemento ao final da fila.
-- Em arrays, isso envolve incrementar o índice da traseira.
-- Em listas encadeadas, é criado um novo nó apontado pelo último nó atual.
+### Push (Inserir)
+- Adiciona um elemento ao topo da pilha.
+- Em arrays, isso envolve incrementar o índice do topo.
+- Em listas encadeadas, um novo nó é criado e apontado para o nó atual do topo.
 
-### Dequeue (Remover)
-- Retira o elemento do início da fila.
-- Em arrays, o índice da frente é incrementado.
-- Em listas encadeadas, a referência da frente é movida para o próximo nó.
+### Pop (Remover)
+- Retira o elemento do topo da pilha.
+- Em arrays, o índice do topo é decrementado.
+- Em listas encadeadas, o ponteiro do topo é movido para o próximo nó.
 
-### Front/Peek (Espiar o Primeiro Elemento)
-- Obtém o primeiro elemento sem removê-lo.
-- Útil para visualizar a próxima remoção.
+### Peek (Consultar o Topo)
+- Retorna o elemento no topo sem removê-lo.
+- Útil para verificar o próximo elemento a ser desempilhado.
 
 ### isEmpty (Verificar se Está Vazia)
-- Retorna `true` se a fila não contiver elementos.
+- Retorna `true` se a pilha não contiver elementos.
 
 ### isFull (Verificar se Está Cheia)
-- Aplicável a arrays de tamanho fixo, onde não há espaço para novos elementos.
+- Aplicável apenas para implementações baseadas em arrays de tamanho fixo.
 
-### Size (Obter Tamanho)
-- Retorna a quantidade de elementos presentes na fila.
+### Size (Obter o Tamanho)
+- Retorna a quantidade de elementos presentes na pilha.
 
 ## Complexidade de Tempo
 
-| Operação   | Complexidade |
-|------------|--------------|
-| Enqueue    | O(1)         |
-| Dequeue    | O(1)         |
-| Front/Peek | O(1)         |
-| isEmpty    | O(1)         |
-| isFull     | O(1)         |
-| Size       | O(1)         |
+| Operação | Complexidade |
+|----------|--------------|
+| Push     | O(1)         |
+| Pop      | O(1)         |
+| Peek     | O(1)         |
+| isEmpty  | O(1)         |
+| isFull   | O(1)         |
+| Size     | O(1)         |
 
-## Implementações
+## Métodos de Implementação
 
 ### Com Array
-- **Vantagens**: Simples e acesso rápido.
-- **Desvantagens**: Tamanho fixo, desperdício de espaço.
-- **Otimização**: Uso de fila circular para reutilização eficiente do espaço.
+- **Vantagens**: Simplicidade e acesso rápido ao topo.
+- **Desvantagens**: Tamanho fixo pode levar a estouro ou desperdício de espaço.
+- **Otimização**: Monitorar um índice do topo para controle eficiente.
 
 ### Com Lista Encadeada
-- **Vantagens**: Crescimento dinâmico.
-- **Desvantagens**: Maior uso de memória para referências.
-- **Eficiência**: Manter ponteiros para frente e traseira melhora o desempenho.
+- **Vantagens**: Crescimento dinâmico sem limite fixo.
+- **Desvantagens**: Consumo extra de memória devido aos ponteiros.
+- **Eficiência**: Inserção e remoção ocorrem apenas no topo, otimizando o desempenho.
 
-### Fila Circular
-- **Vantagens**: Melhor aproveitamento de espaço.
-- **Desvantagens**: Lógica mais complexa.
-- **Implementação**: Uso de aritmética modular para circularidade.
+## Aplicações Práticas
 
-## Aplicações
+- **Avaliação de Expressões**: Conversão de notação infixa para pós-fixa e cálculo de expressões pós-fixas.
+- **Gerenciamento de Memória**: Utilização em call stacks de funções.
+- **Histórico de Navegação**: Controle de páginas "Voltar" e "Avançar" em navegadores web.
+- **Algoritmos de Backtracking**: Implementação da busca em profundidade (DFS) em grafos.
+- **Verificação de Parênteses Balanceados**: Análise de expressões matemáticas e código-fonte.
+- **Conversão de Bases Numéricas**: Mudança entre diferentes sistemas numéricos.
+- **Implementação de Algoritmos**: Como o QuickSort, que usa pilhas para gerenciamento de chamadas recursivas.
 
-- **Escalonamento de Processos**: Sistemas operacionais utilizam filas para gerenciar tarefas.
-- **Filas de Impressão**: Organização de documentos para impressão.
-- **Buffers de Transferência de Dados**: Controle do fluxo de informações.
-- **Algoritmos de Busca em Largura (BFS)**: Exploração sistemática de grafos.
-- **Gestão de Atendimento ao Cliente**: Controle de chamadas e suporte.
-- **Cache de Dados**: Implementação de estratégias como LRU (Least Recently Used).
-- **Simulação de Eventos Discretos**: Modelagem computacional baseada em eventos.
-- **Sistemas de Mensageria**: Comunicação em filas como Kafka e RabbitMQ.
+## Caso de Uso: Histórico de Navegador
 
-## Exemplo: Sistema de Atendimento
+1. Quando o usuário acessa uma nova página, seu URL é armazenado na pilha.
+2. Ao clicar em "Voltar", a pilha desempilha a página atual e retorna à anterior.
+3. O botão "Avançar" usa outra pilha para restaurar as páginas previamente desempilhadas.
 
-Em um sistema de suporte ao cliente:
+## Limitações
 
-1. Os clientes entram na fila conforme sua chegada.
-2. O próximo atendimento é sempre para o cliente que esperou mais tempo.
-3. Novos clientes são adicionados ao final da fila.
+- **Acesso Restrito**: Não é possível acessar elementos intermediários diretamente.
+- **Busca Ineficiente**: Exige desempilhamento até o elemento desejado.
+- **Tamanho Fixo em Arrays**: Pode causar desperdício de memória ou estouro de pilha.
 
-## Variações de Filas
+## Variações
 
-### Fila de Prioridade
-- Elementos possuem prioridades diferentes.
-- O elemento de maior prioridade sai primeiro, independentemente da ordem de inserção.
-- Frequentemente implementada com heaps.
+### Pilha Dupla
+- Utiliza um único array para gerenciar duas pilhas.
 
-### Deque (Fila de Duas Pontas)
-- Permite inserções e remoções tanto no início quanto no final.
-- Combina características de pilhas e filas.
+### Pilha com Mínimo/Máximo
+- Armazena informações auxiliares para consulta rápida do menor/maior elemento.
 
-### Fila Circular
-- Utiliza um array onde o final retorna ao início.
-- Evita deslocamentos após remoções.
-
-### Fila Bloqueante
-- Utilizada em computação concorrente.
-- As operações podem ser bloqueadas caso a fila esteja cheia ou vazia.
-
-## Limitações das Filas
-
-- **Acesso Restrito**: Elementos do meio não podem ser acessados diretamente.
-- **Busca Ineficiente**: Pode exigir a remoção de vários elementos.
-- **Tamanho Fixo em Arrays**: Pode levar a estouro de memória ou desperdício de espaço.
+### Pilha Circular
+- Implementação que reaproveita espaço, permitindo um comportamento cíclico.
 
 ---
 
 Por Mauricio Gabriel e Paulo André - UDF Ciência da Computação
-```
