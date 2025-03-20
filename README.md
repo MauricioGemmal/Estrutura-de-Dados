@@ -29,5 +29,7 @@ A implementação detalhada desse sistema pode ser encontrada no arquivo [tarefa
 ## Disciplina
 Estruturas de Dados I - UDF  
 Professora: Kadidja Valeria Reginaldo de Oliveira
-```
+## Fontes
 
+- Livro disponibilizado do Curso Alura
+- Chat Gpt: https://chatgpt.com/
