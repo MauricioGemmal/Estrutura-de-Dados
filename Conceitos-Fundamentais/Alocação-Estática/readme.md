@@ -23,23 +23,23 @@ A alocação estática de memória refere-se à reserva de espaço para variáve
 
 ## Vantagens
 
-✅ **Desempenho**: Acesso rápido, pois os endereços de memória são conhecidos em tempo de compilação.
-✅ **Segurança**: Reduz riscos de vazamentos de memória.
-✅ **Previsibilidade**: Favorece sistemas embarcados e aplicações críticas.
-✅ **Eficiência**: Evita a sobrecarga de alocação/desalocação dinâmica.
+1. **Desempenho**: Acesso rápido, pois os endereços de memória são conhecidos em tempo de compilação.
+2. **Segurança**: Reduz riscos de vazamentos de memória.
+3. **Previsibilidade**: Favorece sistemas embarcados e aplicações críticas.
+4. **Eficiência**: Evita a sobrecarga de alocação/desalocação dinâmica.
 
 ## Desvantagens
 
-❌ **Inflexibilidade**: Não permite redimensionamento em tempo de execução.
-❌ **Uso Ineficiente da Memória**: Pode alocar mais espaço do que o necessário.
-❌ **Limitações**: Não é ideal para casos onde o tamanho dos dados é desconhecido antecipadamente.
+1. **Inflexibilidade**: Não permite redimensionamento em tempo de execução.
+2. **Uso Ineficiente da Memória**: Pode alocar mais espaço do que o necessário.
+3. **Limitações**: Não é ideal para casos onde o tamanho dos dados é desconhecido antecipadamente.
 
 ## Aplicações Ideais
 
-✔ **Dados com Tamanho Fixo**: Quando não há necessidade de redimensionamento.
-✔ **Sistemas Embarcados**: Onde a previsibilidade de recursos é essencial.
-✔ **Aplicações de Tempo Real**: Que exigem respostas consistentes.
-✔ **Pequenas Estruturas**: Quando a alocação dinâmica não traz benefícios significativos.
+1. **Dados com Tamanho Fixo**: Quando não há necessidade de redimensionamento.
+2. **Sistemas Embarcados**: Onde a previsibilidade de recursos é essencial.
+3. **Aplicações de Tempo Real**: Que exigem respostas consistentes.
+4. **Pequenas Estruturas**: Quando a alocação dinâmica não traz benefícios significativos.
 
 ## Exemplo Prático
 
